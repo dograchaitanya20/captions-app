@@ -1,0 +1,30 @@
+{
+  "name": "captioning-platform",
+  "version": "1.0.0",
+  "description": "Real-time closed captioning platform for Deaf and Hard-of-Hearing users",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "start": "npm run build && cd server && npm start",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install",
+    "lint": "cd client && npm run lint"
+  },
+  "keywords": [
+    "captioning",
+    "accessibility",
+    "deaf",
+    "hoh",
+    "whisper",
+    "transcription"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
